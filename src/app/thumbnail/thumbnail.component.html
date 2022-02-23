@@ -1,7 +1,11 @@
-<mat-card class="thumbnail-wrapper">
-    <mat-card-header>
-        <mat-card-title>Superhero name</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="https://picsum.photos/100/144" alt="image placeholder" >
+
+<div class="heroes-list">
+    <mat-card class="thumbnail-wrapper" *ngFor="let item of items">
+        <mat-card-header>
+            <mat-card-title>{{item.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{item.image.url}}" alt="image placeholder" >
+        
+    </mat-card>
     
-</mat-card>
+</div>

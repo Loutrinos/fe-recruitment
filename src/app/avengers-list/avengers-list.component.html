@@ -1,0 +1,2 @@
+    <app-thumbnail *ngIf="avengers$"  [items]="avengers$ | async"></app-thumbnail>
+    <p *ngIf="!avengers$">Loading</p>

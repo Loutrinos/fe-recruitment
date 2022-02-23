@@ -1,9 +1,12 @@
-// You need to add the necessary selector that retrieves the data from the store and the component can use.
-import { Injectable } from "@angular/core";
+import { createSelector } from "@ngrx/store";
+import { AppState, Character, CharacterState } from "./character.model";
 
-@Injectable({
-	providedIn: "root"
-})
-export class CharacterSelector {
 
-}
+
+ const selectCharacters = (state: AppState) => state.characters;
+
+ 
+export const selectFeatureCount = createSelector(
+	selectCharacters,
+	(state:CharacterState) => state.list
+  );

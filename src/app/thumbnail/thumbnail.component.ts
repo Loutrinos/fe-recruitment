@@ -10,7 +10,7 @@ import { Character } from "../sdk/character.model";
 })
 export class ThumbnailComponent implements OnInit {
 
-	@Input() item: Character | undefined;
+	@Input() items: Character[] | undefined;
 
 	constructor(
 		private router: Router
